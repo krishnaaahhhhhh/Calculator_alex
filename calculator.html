@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator project</title>
+    <style>
+        #calculator
+        {
+            border: 1px rgb(187,183,183);
+            border-radius: 5px;
+            width:200px;
+        }
+        #display
+        {
+            margin: 10px;
+            width:85%;
+            font-size: 25px;
+        }
+        .button-container{
+            display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+           }
+           .button{
+            width:45px;
+            height:45px;
+            margin:3px;
+
+           }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly;>
+        <div class="button-container">
+            <button class="button" onclick="changeValue=' ' ; document.querySelector('#display').value=changeValue;">C</button>
+            <button class="button" onclick="changeValue=changeValue + '1' ;document.querySelector('#display').value=changeValue;">1</button>
+            <button class="button" onclick="changeValue=changeValue + '2' ;document.querySelector('#display').value=changeValue;">2</button>
+            <button class="button" onclick="changeValue=changeValue + '+' ;document.querySelector('#display').value=changeValue;">+</button>
+            <button class="button" onclick="changeValue=changeValue + '3' ;document.querySelector('#display').value=changeValue;" >3</button>
+            <button class="button" onclick="changeValue=changeValue + '4' ;document.querySelector('#display').value=changeValue;" >4</button>
+            <button class="button" onclick="changeValue=changeValue + '-'; document.querySelector('#display').value=changeValue;" >-</button>
+            <button class="button" onclick="changeValue=changeValue + '5' ;document.querySelector('#display').value=changeValue;" >5</button>
+            <button class="button" onclick="changeValue=changeValue + '6' ;document.querySelector('#display').value=changeValue;" >6</button>
+            <button class="button" onclick="changeValue=changeValue + '*'; document.querySelector('#display').value=changeValue;" >*</button> 
+            <button class="button" onclick="changeValue=changeValue + '7'; document.querySelector('#display').value=changeValue;" >7</button>
+        <button class="button" onclick="changeValue=changeValue + '8'; document.querySelector('#display').value=changeValue;" >8</button>
+        <button class="button" onclick="changeValue=changeValue + '/' ;document.querySelector('#display').value=changeValue;" >/</button>
+
+
+         <button class="button" onclick="
+         let result=eval(changeValue);
+         changeValue=result ;document.querySelector('#display').value=changeValue;" >=</button>
+        
+        
+         <button class="button" onclick="changeValue=changeValue + '9' ;document.querySelector('#display').value=changeValue;" >9</button>
+        <button class="button" onclick="changeValue=changeValue + '0' ;document.querySelector('#display').value=changeValue;" >0</button>
+        <button class="button" onclick="changeValue=changeValue + '.'; document.querySelector('#display').value=changeValue;" >.</button>
+        </div>
+    </div>
+    <script>
+        let changeValue=' ';
+        document.querySelector('#display').value=changeValue;
+    </script>
+
+
+    
+</body>
+</html>
